@@ -1,0 +1,1117 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+h1{
+    font-size: x-large;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h2{
+    position: relative;
+}
+
+.sub-headline::after{
+    content: "";
+    height: 3px;
+    width: 28%;
+    background-color: #1f80ee;
+    position: absolute;
+    bottom: -8px;
+    left: 0px;
+}
+
+p{
+    position: relative;
+}
+
+.main-headline::after{
+    content: "";
+    height: 3px;
+    width: 40px;
+    background-color: #1f80ee;
+    position: absolute;
+    bottom: -10px;
+    left: 48%;  
+}
+
+
+body{
+    font-family: 'Montserrat',sans-serif;
+}
+
+.section-p1{
+padding: 80px 100px 30px 100px;
+}
+
+#header{
+    background-color: #000000;
+    padding: 40px 100px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    box-shadow: 30px 30px 50px rgba(0,0, 0, 0.03);
+}
+
+#header .bar{
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    display: none;
+}
+
+#header .cross{
+    display: none;
+}
+#header h1{
+    font-size: xx-large;
+    font-weight: 900;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+#navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#navbar li{
+    list-style: none;
+    margin-left: 40px;
+}
+
+#navbar li a{
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    position: relative;
+    transition: 3s,ease-in;
+}
+
+#navbar li a:hover:after{
+content: "";
+background-color: white;
+height: 2px;
+position: absolute;
+bottom: -4px;
+left: 0px;
+width: 50%;
+cursor: pointer;
+right: 25px;
+}
+
+
+#navbar li .active::after{
+    content: "";
+    background-color: white;
+    height: 2px;
+    position: absolute;
+    width: 50%;
+    right: 25px;
+    bottom: -4px;
+    left: 0px;
+}
+
+
+#method{
+    background-color :white;
+    padding: 10px  30px 14px 10px;
+    color: black;
+    position: absolute;
+    top: 84px;left: 74%;
+    z-index: 999;
+    box-shadow: 30px 30px 50px rgba(0,0, 0, 0.03);
+    border-radius: 4px;
+    display: none;
+}
+
+#method-2{
+    background-color :white;
+    padding: 10px  30px 14px 10px;
+    color: black;
+    position: absolute;
+    top: 150px;
+    left: 62.3%;
+    z-index: 999;
+    box-shadow: 30px 30px 50px rgba(0,0, 0, 0.03);
+    border-radius: 4px;
+    display: none;
+}
+
+#method.drop-active{
+    display: initial;
+}
+
+#method-2.drop-left{
+    display: initial;
+}
+
+#method li,
+#method-2 li{
+    margin: 0;
+    line-height: 2;
+}
+
+#method li a,
+#method-2 li a{
+    padding: 10px 20px 10px 10px;
+    font-size: 13px;
+    text-transform: none;
+    color: #4e4e4e;
+}
+
+
+
+/* hero section */
+
+#hero{
+    background-image: url("img/pexels-daniel-reche-3721941.jpg");
+    height: 90vh;
+    width: 100%;
+    background-size: cover;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    background-position: top 30% right 50%;
+}
+
+#hero div h1{
+    font-size: 60px;
+    font-weight: 700;
+}
+
+#hero div marquee{
+    font-size: 30px;
+}
+
+
+
+
+/* about section */
+
+
+
+#about .about-details{
+    display: flex;
+    justify-content: space-between;
+    padding: 60px 40px ;
+    align-items: flex-start;
+    box-shadow: 10px 10px 80px 50px rgba(0,0, 0, 0.06);
+}
+
+
+#about .details-1{
+    width: 45%;
+}
+
+#about .details-1-data{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+#about .details-1 img{
+    width: 200px;
+    margin-right: 40px;
+    height: 200px;
+}
+
+#about .details-1 .details-1-data{
+    line-height: 2;
+}
+
+#about .details-1-skill h2{
+    font-size: 30px;
+    font-weight: 650;
+    padding-bottom: 15px;
+}
+
+#about .details-1-skill div{
+    padding-bottom: 13px;
+}
+
+
+
+#about .progress{
+    display: flex;
+    border: 1px solid gray;
+    width: 100%;
+    margin-top: 8px;
+    height: 10px;
+}
+
+#about .details-1-skill .part-1{
+    background-color: aqua;
+}
+#about .details-1-skill .part-2{
+    background-color: rgba(0, 255, 255, 0.335);
+}
+
+#about .about-details .details-2{
+    width: 50%;
+}
+
+#about .details-2{
+    width: 50%;
+}
+#about .details-2 h2{
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 28px;
+}
+
+
+#about .details-2 p{
+    padding-bottom: 25px;
+    line-height: 1.8;
+    font-size: 16px;
+    font-weight: 550;
+    color: gray;
+}
+
+
+
+/* service section */
+
+#services{
+    text-align: center;
+}
+ h1{
+    font-size: 50px;
+    font-weight: 900;
+    padding-bottom: 10px;
+}
+
+#feature{
+    padding: 40px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#feature .learn{
+    width: 32%;
+    box-shadow: 10px 10px 80px 50px rgba(0,0, 0, 0.06);
+    border-radius: 12px;
+    padding:60px 15px 15px 25px;
+    margin-top: 20px;
+}
+
+#feature .icon,
+#banner .icon{
+    padding:20px 25px;
+    border: 10px solid rgb(25, 172, 231);
+    border-radius: 50%;
+    font-size: 45px;
+    font-weight: 300;
+    color: black;
+}
+
+#feature .learn:hover .icon{
+    background-color : rgb(25, 172, 231);
+    color: white;
+    border: 10px solid #d0f4f1;
+}
+
+#feature .learn h2{
+    font-size: 20px;
+    padding: 50px 0 15px 0;
+}
+
+#feature .learn p{
+    color: gray;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+/* banner section */
+
+#banner{
+    height: 60vh;
+    width: 100%;
+    margin: 30px 0 ;
+     background-image: url("img/wide-angle-shot-single-tree-growing-clouded-sky-during-sunset-surrounded-by-grass.jpg");
+     background-attachment: fixed;
+     background-size: cover;
+     position:relative;
+     overflow: hidden;
+}
+
+#banner .overlay,
+#banner-1 .overlay{
+    width: 100%;
+    padding: 0 180px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1d277d70;
+     position: absolute;
+     top: 0;
+     left: 0;
+}
+
+#banner .col{
+    text-align: center;
+}
+
+
+#banner .col h5{
+    color: white;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+#banner h1{
+    color: white;
+    margin: 50px 0 10px 0;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+#banner .icon{
+    color: whitesmoke;
+    border: 10px solid whitesmoke;
+}
+
+
+#work{
+    text-align: center;
+}
+
+#work-box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 60px ;
+    flex-wrap: wrap;
+}
+
+#work-box .box-details{
+    width: 31%;
+    box-shadow: 10px 10px 80px 50px rgba(0,0, 0, 0.06);
+    text-align: start;
+    margin-bottom: 25px;
+}
+#work-box .box-details img{
+    width: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+    transition: .2s;
+}
+
+
+#work-box .box-details img:hover{
+    transform: scale(1.2);
+    cursor: pointer;
+    z-index: 999;
+}
+
+#work-box .box-details div{
+    padding: 25px 20px;
+    position: relative;
+}
+
+
+#work-box .box-details div i{
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    font-size: 35px;
+    color: rgb(25, 172, 231);
+}
+
+#work-box .box-details h4{
+    font-size: 15px;
+    font-weight: 700;
+}
+
+#work-box .box-details p{
+    font-size: 11px;
+    font-weight: 600;
+    padding-top: 5px;
+}
+
+#work-box .box-details span{
+    color: rgb(25, 172, 231);
+}
+
+/* bannner-1 section */
+
+#banner-1{
+    background-image: url("img/mountain-landscape-with-car-driving-down-road.jpg") ;
+    background-size: cover;
+    height: 70vh;
+    margin: 30px 0 ;
+    width: 100%;
+    margin: 30px 0 ;background-attachment: fixed;
+     position:relative;
+}
+
+
+
+
+#banner-1 .slide-box{
+    width: 100%;
+    height: 100%;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+}
+
+#banner-1 .slide-box  .slide{
+    position: absolute;
+    width: 100%;
+    left: 0px;
+    top: 90px;
+}
+
+#banner-1 .slide-box  .slide img{
+    border-radius: 50%;
+    object-fit: cover;
+    width: 170px;
+    height: 180px;
+}
+
+#banner-1 .button{
+    position: absolute;
+    bottom: 40px;
+    display: flex;
+    left: 49%;
+}
+
+#banner-1 .button button{
+    background-color: rgb(237, 230, 230);
+    border: 1px solid gray;
+    padding: 4px;
+    border-radius: 50%;
+    margin-left: 5px;
+}
+
+#banner-1 .button button:hover{
+    background-color: red;
+    cursor: pointer;
+}
+
+#banner-1 .slide h3{
+    font-size: 35px;
+    font-weight: 700;
+    color: white;
+    margin: 10px 0;
+}
+
+#banner-1 .slide p{
+    font-size: 14px;
+    font-weight: 500;
+    color: white;
+}
+
+
+/* blog section */
+
+#blog{
+    text-align: center;
+}
+
+#blog-box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 0 30px 0;
+    flex-wrap: wrap;
+}
+
+#blog-box .blog-details{
+    width: 32%;
+    text-align: start;
+    box-shadow: 10px 10px 80px 50px rgba(0,0, 0, 0.06);
+    border-radius: 10px;
+}
+
+#blog-box .main-img{
+    object-fit: cover;
+    width: 100%;
+    height: 200px;
+    
+}
+
+
+#blog-box .blog-details{
+    position: relative;
+}
+
+#blog-box .blog-details h5{
+    background-color: #01b2cd;
+    padding:  5px 14px;
+    left: 40%;
+    position: absolute;
+    top: 188px;
+    border-radius: 4px;
+    color: white;
+    font-size: 13px;
+}
+
+#blog-box .info{
+    padding: 30px 15px 10px 15px;
+    box-shadow: 10px 10px 80px 50px rgba(0,0, 0, 0.06);
+    border-radius: 6px;
+}
+
+#blog-box .info h2{
+    font-size: 18px;
+    font-weight: 700;
+}
+
+#blog-box .info p{
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 2;
+    color: gray;
+}
+
+
+
+#blog-box .sub-info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    padding:8px 15px;
+}
+
+#blog-box .small-img{
+    border-radius: 50%;
+    width: 35px;
+    margin-right: 8px;
+}
+
+#blog-box .sub-info div{
+    display: flex;
+    align-items: center;
+}
+#blog-box .sub-info  span{
+    font-size: 13px;
+    color: gray;
+}
+
+
+#contact {
+    background-image: url(img/mountain-landscape-with-car-driving-down-road.jpg);
+    width: 100%;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#contact .contact-box{
+    width: 100%;
+    background-color: rgba(4, 172, 239, 0.488);
+    padding: 100px 90px 40px 90px;
+}
+
+#contact-details{
+    width: 100%;
+    padding: 80px 60px;
+    background-color: white;
+    border-radius: 3px;
+    display: flex;
+    justify-content: space-between;
+}
+#contact-details h2{
+    font-size: 35px;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+form{
+    display: flex;
+    width: 48%;
+    flex-direction: column;
+}
+
+form div{
+    text-align: center;
+}
+
+form input,
+form textarea{
+    width: 100%;
+    padding: 10px 20px;
+    border-radius: 3px;
+    font-size: 14px;
+    border: 1px solid grey;
+    outline: none;
+    margin-bottom: 20px;
+}
+
+form button{
+    padding: 15px 30px;
+    background-color: #01b2cd;
+    color: white;
+    font-weight: 700;
+    border: 1px solid #01b2cd;
+    outline: none;
+    text-align: center;
+    border-radius: 30px;
+    font-size: 17px;
+}
+
+form button:hover{
+    background-color : rgb(78, 192, 237);
+    color: white;
+    border: 5px solid #b5f2ed;
+    cursor: pointer;
+}
+
+
+
+#contact-details .con-info{
+    width: 48%;
+}
+
+#contact-details .con-info p{
+    padding-bottom:20px;
+    line-height: 2;
+    font-size: 17px;
+    color: gray;
+}
+
+#contact-details .con-info li{
+    padding-bottom: 15px;
+    list-style: none;
+}
+
+#contact-details .con-info li a{
+    text-decoration: none;
+    color: rgb(93, 91, 91);
+}
+
+#contact-details .con-info li a i{
+    color: #01b2cd;
+    padding-right: 10px;
+}
+
+#contact-details .follow{
+    padding-top: 33px;
+}
+
+#contact-details .follow a{
+    padding:10px 15px;
+    border: 5px solid rgb(25, 172, 231);
+    border-radius: 50%;
+    font-size: 25px;
+    font-weight: 300;
+    margin-right: 8px;
+    color: black;   
+}
+
+#contact-details .follow a:hover{
+    background-color : rgb(25, 172, 231);
+    color: white;
+    border: 5px solid #d0f4f1;
+}
+
+
+/* footer section */
+
+footer{
+    text-align: center;
+    color: #fff;
+    padding: 25px 0;
+    position: relative;
+    background: #0062d3;
+}
+
+footer p{
+    font-size: 13px;
+    margin-bottom: 10px;
+    font-weight: 500;
+    word-spacing: 2px;
+}
+ 
+footer span{
+    font-size: 15px;
+    font-weight: 700;
+}
+
+footer i{
+    padding: 13px 16px;
+    background-color: #6ea3e0;
+    border-radius: 50%;
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+/* media query start */
+
+@media (max-width:799px){
+
+
+    .section-p1{
+        padding: 60px 40px 40px 40px;
+        }
+
+    #header {
+        padding: 35px 45px;
+    }
+    #navbar{
+        background-color: white;
+        padding: 80px 40px;
+        color: black;
+        display:flex;
+        justify-content:flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        left: -100%;
+        height: 100vh;
+        width: 100%;
+    }
+
+    #header .bar{
+        display: initial;
+        font-size: 30px;
+    }
+
+    #header .bar:hover{
+        color: #0062d3;
+    }
+
+    #header .cross{
+        display: initial;
+        position: absolute;
+        top: 30px;
+        right: 40px;
+    }
+
+    #header .cross a{
+        font-size: 30px;
+    }
+
+    #header .cross a:hover{
+        color: #0062d3;
+        cursor: pointer;
+    }
+
+    /* navbar section */
+
+    #navbar li a{
+        color: black;
+        font-size: 20px;
+        transition: 0s;
+    }
+
+    #navbar.activebar{
+        left: 0;
+    }
+
+    #navbar li a:hover{
+        cursor: pointer;
+    }
+
+    #navbar li{
+        margin-left: 0px;
+        padding-bottom: 30px;
+    }
+
+    #method {
+        width: 95%;
+        top: 37%;
+        left: 20px;
+        box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+    }
+
+    #method-2 {
+        width: 50%;
+        background-color: white;
+        padding: 10px  30px 14px 10px;
+        color: black;
+        position: absolute;
+        top: 55%;
+        left: 31%;
+        box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+    }
+
+
+
+    /* hero section */
+
+    #hero {
+        text-align: center;
+        padding: 0px 20px;
+        background-position: 55%;
+        height: 80vh;
+    }
+
+    #hero div h1 {
+        font-size: 50px;
+        font-weight: 700;
+    }
+
+
+    /* feature section */
+    #feature .learn{
+        padding:60px 10px 15px 10px;
+    }
+    
+
+    /* about section */
+
+    #about .about-details {
+        padding: 40px 20px;
+    }
+
+    #about .about-details .details-2{
+        width: 45%;
+    }
+
+    #about .details-1 img {
+        margin-right: 20px;
+    }
+    #about .details-1-data{
+        align-items: flex-start;
+        margin-bottom: 50px;
+    }
+
+    /* banner section */
+
+    #banner{
+        height: 40vh;
+    }
+
+
+    #banner .overlay,
+#banner-1 .overlay{
+    padding: 0 60px;
+}
+
+/* work section */
+#work-box .box-details div i {
+    position: absolute;
+    top: 45px;
+    right: 10px;
+    font-size: 25px;
+}
+
+/* banner-1 section */
+
+
+#banner-1{
+    height: 50vh;
+}
+
+/* contact section */
+
+#contact .contact-box {
+    padding: 60px 40px 20px 40px;
+}
+
+#contact-details {
+    padding: 60px 40px;
+}
+
+#contact-details .follow a {
+    margin-right: 5px;
+}
+
+/* footer */
+
+footer i{
+    right: 20px;
+    bottom: 20px;
+}
+
+}
+
+@media (max-width:477px){
+    #header{
+        padding: 15px 20px ;
+    }
+   
+
+    #header h1 {
+        font-size: x-large;
+    }
+    #header .bar {
+        font-size: 20px;
+    }
+    .section-p1 {
+        padding: 40px 20px 20px 20px;
+    }
+    
+    #hero {
+        text-align: start;
+        padding: 0 20px;
+        background-position: 50%;
+        height: 65vh;
+    }
+
+    #hero div h1 {
+        font-size: 40px;
+    }
+
+    #hero div marquee {
+        font-size: 20px;
+        scroll-behavior: smooth;
+    }
+    
+/* about section */
+
+
+
+/* about section */
+
+#about .about-details{
+    justify-content: center;
+    padding: 40px 20px ;
+    flex-wrap: wrap;
+}
+
+#about .details-1 {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+#about .about-details .details-2 {
+    width: 100%;
+}
+
+#about .details-1-data {
+    margin-bottom: 20px;
+}
+
+#about .details-1-data {
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+#about .details-1 img {
+    margin-right: 0px;
+    padding-bottom: 20px;
+}
+
+        
+/* feature section */
+
+#feature .learn{
+    width: 100%;
+    padding:50px 10px 15px 20px;
+    margin-top: 30px;
+}
+
+/* banner section */
+
+
+#banner {
+    height: 100vh;
+}
+
+#banner h1 {
+    margin: 30px 0 5px 0;
+}
+
+
+#banner .icon{
+    padding:10px 15px;
+    border: 10px solid white;
+    font-size: 30px;
+    color: white;
+}
+
+#banner .overlay,
+#banner-1 .overlay{
+    width: 100%;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#banner .col {
+    text-align: center;
+    padding: 30px;
+}
+
+/* work box section */
+
+#work-box .box-details {
+    width: 100%;
+    }
+
+
+/* banner-1 section */
+
+    #banner-1 {
+        height: 60vh;
+    }
+
+    #banner .overlay, #banner-1 .overlay {
+        padding: 0 20px;
+    }
+
+    /* blog section */
+
+    #blog-box {
+        justify-content: center;
+        padding: 50px 0 20px 0;
+    }
+
+    #blog-box .blog-details {
+        width: 100%;
+        margin: 20px 0;
+    }
+
+    /* contact section */
+
+    #contact .contact-box {
+        width: 100%;
+        padding: 60px 20px 40px 20px;
+    }
+
+    #contact-details {
+        padding: 40px 20px;
+        justify-content: center;
+        flex-direction: column;
+    }
+    
+    #contact-details .follow a {
+        font-size: 20px;
+    }
+
+
+    form {
+        width: 100%;
+        padding-bottom: 40px;
+    }
+
+    #contact-details .con-info {
+        width: 100%;
+    }
+
+    footer {
+        padding: 15px 0;
+    }
+
+    footer i{
+        right: 18px;
+        bottom: 15px;
+    }
+
+}
