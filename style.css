@@ -1114,4 +1114,16 @@ footer i{
         bottom: 15px;
     }
 
+
+    #method-2 {
+        width: 70%;
+        top: 55%;
+        left: 45%;
+    }
+
+    #method li, #method-2 li {
+        margin: 0;
+        line-height: 1;
+    }
+
 }
