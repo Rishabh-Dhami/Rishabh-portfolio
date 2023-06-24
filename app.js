@@ -1,44 +1,30 @@
 const slides=document.querySelectorAll(".slide");
 const navbar=document.querySelectorAll("#navbar a")
 
-navbar[0].addEventListener('click',function(){
-    navbar[0].classList.add("active")
-})
+const sec=document.querySelectorAll("section")
 
-navbar[1].addEventListener('click',function(){
-    removeClass();
-    navbar[1].classList.add("active")
-})
-navbar[2].addEventListener('click',function(){
-    removeClass();
-    navbar[2].classList.add("active")
-})
-navbar[3].addEventListener('click',function(){
-    removeClass();
-    navbar[3].classList.add("active")
-})
-navbar[4].addEventListener('click',function(){
-    removeClass();
-    navbar[4].classList.add("active")
-})
+function myMenu(){
+    let current="";
+    sec.forEach(sec=>{
+        sectionTop=sec.offsetTop;
+        sectinHeight=sec.clientHeight;
 
-navbar[5].addEventListener('click',function(){
-    removeClass();
-    navbar[5].classList.add("active")
-})
-
-navbar[6].addEventListener('click',function(){
-    removeClass();
-    navbar[6].classList.add("active")
-})
-
-const removeClass=()=>{
-    navbar.forEach((nav)=>{
-        if(nav.className== 'active'){
-            nav.classList.remove('active')
+        if(pageYOffset >= (sectionTop - sectinHeight/3)){
+            current=sec.getAttribute('id')
         }
     })
+
+    navbar.forEach((nav,index)=>{
+        nav.classList.remove("active")
+        if(nav.classList.contains(current)){
+            nav.classList.add("active")
+        }
+    
+    })
 }
+
+window.addEventListener('scroll',myMenu)
+
 
 
  
