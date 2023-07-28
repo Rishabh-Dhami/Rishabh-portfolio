@@ -42,6 +42,8 @@ p{
 }
 
 
+
+
 body{
     font-family: 'Montserrat',sans-serif;
 }
@@ -50,17 +52,20 @@ body{
 padding: 80px 100px 30px 100px;
 }
 
+
+
 #header{
-    background-color: #000000;
-    padding: 40px 100px;
+    width: 100%;
+    background-color: transparent;
+    padding: 20px 100px;
     color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: sticky;
+    position: fixed;
     top: 0;
     left: 0;
-    z-index: 999;
+    z-index: 99;
     box-shadow: 30px 30px 50px rgba(0,0, 0, 0.03);
 }
 
@@ -165,6 +170,8 @@ right: 25px;
     line-height: 2;
 }
 
+
+
 #method li a,
 #method-2 li a{
     padding: 10px 20px 10px 10px;
@@ -173,26 +180,51 @@ right: 25px;
     color: #4e4e4e;
 }
 
+#cursor{
+    width: 20px;
+    background-color: #54B435;
+    border-radius: 50%;
+    height: 20px;
+    position: fixed;
+    z-index: 999;
+}
+
+#cursor-blur{
+    width: 450px;
+    background-color:  #55b43586;
+    border-radius: 50%;
+    height: 450px;
+    filter: blur(60px);
+    position: fixed;
+    z-index: 9;
+}
+
 
 
 /* hero section */
 
 #hero{
-    background-image: url("img/pexels-daniel-reche-3721941.jpg");
-    height: 90vh;
+    background-image: url("img/IMG_4036.JPG");
+    height: 100vh;
     width: 100%;
     background-size: cover;
     color: white;
     display: flex;
     align-items: center;
     justify-content:center;
-    background-position: top 30% right 50%;
+    background-position:top 17% right 55%;
+    background-attachment: fixed;
+    z-index: 10;
 }
 
 #hero div h1{
-    font-size: 60px;
-    font-weight: 700;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 77px;
+    font-weight: 900;
+    -webkit-text-stroke: 1px white;
+    color: transparent;
 }
+
 
 #hero div marquee{
     font-size: 30px;
@@ -206,11 +238,14 @@ right: 25px;
 
 
 #about .about-details{
+    position: relative;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     padding: 60px 40px ;
     align-items: flex-start;
     box-shadow: 10px 10px 80px 50px rgba(0,0, 0, 0.06);
+    z-index: 10;
+    gap: 40px;
 }
 
 
@@ -218,22 +253,34 @@ right: 25px;
     width: 45%;
 }
 
-#about .details-1-data{
+#about  .details-1-in{
     display: flex;
-    justify-content:space-between;
-    align-items: center;
-    margin-bottom: 30px;
+    align-items: flex-start;
+    justify-content: space-between;
+    line-height: 28px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
 }
 
-#about .details-1 img{
-    width: 200px;
-    margin-right: 40px;
-    height: 200px;
+
+#about .details-1 .details-1-img{
+    width: 45%;
+}
+
+
+#about .details-1 .details-1-img img{
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
 #about .details-1 .details-1-data{
-    line-height: 2;
+width: 50%;
 }
+
+
+
+
 
 #about .details-1-skill h2{
     font-size: 30px;
@@ -290,6 +337,8 @@ right: 25px;
 
 #services{
     text-align: center;
+    z-index: 10;
+    position: relative;
 }
  h1{
     font-size: 50px;
@@ -307,6 +356,7 @@ right: 25px;
 
 #feature .learn{
     width: 32%;
+    height: 60vh;
     box-shadow: 10px 10px 80px 50px rgba(0,0, 0, 0.06);
     border-radius: 12px;
     padding:60px 15px 15px 25px;
@@ -351,6 +401,8 @@ right: 25px;
      background-size: cover;
      position:relative;
      overflow: hidden;
+     z-index: 10;
+     position: relative;
 }
 
 #banner .overlay,
@@ -462,6 +514,7 @@ right: 25px;
     width: 100%;
     margin: 30px 0 ;background-attachment: fixed;
      position:relative;
+     z-index: 10;
 }
 
 
@@ -509,6 +562,10 @@ right: 25px;
     cursor: pointer;
 }
 
+#banner-1 .button button.active{
+    background-color: red; 
+}
+
 #banner-1 .slide h3{
     font-size: 35px;
     font-weight: 700;
@@ -527,6 +584,8 @@ right: 25px;
 
 #blog{
     text-align: center;
+    z-index: 10;
+    position: relative;
 }
 
 #blog-box{
@@ -641,6 +700,8 @@ right: 25px;
 form{
     display: flex;
     width: 48%;
+    z-index: 10;
+    position: relative;
     flex-direction: column;
 }
 
@@ -735,6 +796,8 @@ footer{
     padding: 25px 0;
     position: relative;
     background: #0062d3;
+    z-index: 10;
+    position: relative;
 }
 
 footer p{
@@ -770,7 +833,7 @@ footer i{
         }
 
     #header {
-        padding: 35px 45px;
+        padding: 20px 40px;
     }
     #navbar{
         background-color: white;
@@ -863,30 +926,56 @@ footer i{
     }
 
     #hero div h1 {
-        font-size: 50px;
-        font-weight: 700;
+        font-size: 4.8rem;
+        font-weight: 900;
+    }
+
+    #hero div marquee {
+        width: 100%;
+        white-space: nowrap;
+        font-size: 1.5rem;
+        text-align: center;
     }
 
 
     /* feature section */
-    #feature .learn{
-        padding:60px 10px 15px 10px;
+
+    #feature .learn {
+        width: 49%;
+         padding: 60px 10px 15px 10px;
+        height: 42vh;
     }
+    
     
 
     /* about section */
 
-    #about .about-details {
-        padding: 40px 20px;
+    #about .details-1-in{
+        margin-bottom: 0;
+    }
+
+    #about .details-1-in .details-1-img{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    #about .details-1-in .details-1-data{
+        width: 100%;
+    }
+    
+     
+   #about .about-details {
+        padding: 40px 15px;
     }
 
     #about .about-details .details-2{
         width: 45%;
     }
-
-    #about .details-1 img {
-        margin-right: 20px;
+    
+    #about .details-1-skill{
+        width: 100%;
     }
+
     #about .details-1-data{
         align-items: flex-start;
         margin-bottom: 50px;
@@ -949,13 +1038,13 @@ footer i{
    
 
     #header h1 {
-        font-size: x-large;
+       font-size: x-large;
     }
     #header .bar {
         font-size: 20px;
     }
     .section-p1 {
-        padding: 40px 20px 20px 20px;
+        padding: 40px 15px 20px 15px;
     }
     
     #hero {
@@ -966,15 +1055,35 @@ footer i{
     }
 
     #hero div h1 {
-        font-size: 40px;
+        font-size: 2.7rem;
+        padding-bottom: 0px;
+        text-align: center;
     }
 
     #hero div marquee {
-        font-size: 20px;
+        font-size: 1rem;
         scroll-behavior: smooth;
     }
     
-/* about section */
+
+    #method {
+        width: 100%;
+        top: 43%;
+        left: 20px;
+        box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+    }
+
+    #method-2 {
+        width: 70%;
+        top: 57%;
+        left: 45%;
+    }
+
+    
+    #method li, #method-2 li {
+        margin: 0;
+        line-height: 1;
+    }
 
 
 
@@ -1115,16 +1224,5 @@ footer i{
     }
 
 
-    #method-2 {
-        width: 70%;
-        top: 55%;
-        left: 45%;
-    }
-
-    #method li, #method-2 li {
-        margin: 0;
-        line-height: 1;
-    }
-    
 
 }

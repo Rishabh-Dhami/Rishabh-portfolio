@@ -1,9 +1,25 @@
-const slides=document.querySelectorAll(".slide");
+// cursor
+
+const cursor=document.querySelector("#cursor");
+const cursorBlur=document.querySelector("#cursor-blur");
+
+window.addEventListener("mousemove",(move)=>{
+    cursor.style.left=move.x+"px";
+    cursor.style.top=move.y+"px";
+    cursorBlur.style.left=move.x-225+"px";
+    cursorBlur.style.top=move.y-225+"px"
+})
+
+
+
+
+// navbar 
+
 const navbar=document.querySelectorAll("#navbar a")
 
 const sec=document.querySelectorAll("section")
 
-function myMenu(){
+function navbarscroller(){
     let current="";
     sec.forEach(sec=>{
         sectionTop=sec.offsetTop;
@@ -23,22 +39,30 @@ function myMenu(){
     })
 }
 
-window.addEventListener('scroll',myMenu)
+window.addEventListener('scroll',navbarscroller)
 
 
 
+const slides=document.querySelectorAll("#banner-1 .slide");
+const btn=document.querySelectorAll("#banner-1 .button button");
  
  slides.forEach((slide,index)=>{
     slide.style.left=`${index * 100}%`;
  })
 
 
-const goprev=()=>{
-    slideDiv(0);
-}
+btn.forEach((btn,index)=>{
+btn.addEventListener("click",()=>{
+    removeBtn();
+    btn.classList.add("active")
+slideDiv(index);
+})
+})
 
-const goNext=()=>{
-    slideDiv(1)
+const removeBtn=()=>{
+    btn.forEach((btn)=>{
+        btn.classList.remove("active")
+    })
 }
 
     const slideDiv=(value="")=>{
@@ -78,3 +102,47 @@ if(cross){
         sideBar.classList.remove("activebar");
     })
 }
+
+
+
+const DEVELOPER_EMAIL = 'rishabhdhami090gmail.com';
+const EMAIL_SUBJECT_LINE = "I'm Interested to work together";
+
+const form = document.querySelector('form#contact-form');
+
+const nameInput = form.querySelector('input#name');
+const emailInput = form.querySelector('input#email');
+const messageInput = form.querySelector('textarea#message');
+
+/**
+ * @TODO: handleContactFormSubmit() requires a passwordless email submittion
+ * that will allow one email address to contact another email address without
+ * any credentials in between. 
+ */ 
+const handleContactFormSubmit = (e) => {
+	e.preventDefault();
+
+	const modifiedEmailSubject = `[${nameInput.value}] ${EMAIL_SUBJECT_LINE}`;
+	window.open(
+		`mailto:${DEVELOPER_EMAIL}?subject=${modifiedEmailSubject}&body=${messageInput.value}`
+	);
+};
+
+const submitInput = form.querySelector('button');
+submitInput.addEventListener('click', handleContactFormSubmit);
+
+
+
+// gsap section
+
+gsap.to("#header",{
+    backgroundColor:"black",
+    scrollTrigger:{
+        trigger:"#header",
+        scroller:"body",
+        // markers:true,
+        start:"top -10%",
+        end:"top -11%",
+        scrub:.5
+    }
+})
