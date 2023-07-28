@@ -1055,35 +1055,35 @@ footer i{
         line-height: 0;
     }
 
-    #hero div h1 {
-        font-size: 2.5rem;
-        padding-bottom: 0px;
+    #hero div h1{
+        font-size: 1.5rem;
         text-align: center;
-        margin: 0px;
-        padding: 0;
     }
+
+    #hero div marquee {
+        width: 100%;
+        white-space: normal;
+        font-size: 13px;
+        text-align: center;
+        padding: 20px 0;
+    }
+
 
    
 
-    #hero div marquee {
-        white-space: normal;
-        font-size: 16px;
-        scroll-behavior: smooth;
-        margin: 0;
-        padding: 0;
-    }
+   
     
 
     #method {
         width: 100%;
-        top: 43%;
+        top: 46%;
         left: 20px;
         box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
     }
 
     #method-2 {
         width: 70%;
-        top: 57%;
+        top: 63%;
         left: 45%;
     }
 
